@@ -15,6 +15,8 @@
     </ul>
 </nav>
 
+<main>
+
 <h1>Girlys Photocopy</h1>
 
 <img src="../images/girlys.jpg"
@@ -47,6 +49,85 @@ reasonable prices, and location close to the campus.
         <td>12:00 PM - 3:00 PM</td>
     </tr>
 </table>
+
+<hr>
+
+<h2>Suggest a Place</h2>
+
+<form action="#">
+    <p>
+        <label for="placename">Place Name:</label>
+        <input
+            type="text"
+            id="placename"
+            name="placename"
+            required>
+    </p>
+
+    <fieldset>
+        <legend>Category</legend>
+
+        <input
+            type="radio"
+            id="photocopy"
+            name="category"
+            value="photocopy">
+        <label for="photocopy">Photocopy Shop</label><br>
+
+        <input
+            type="radio"
+            id="printing"
+            name="category"
+            value="printing">
+        <label for="printing">Printing Shop</label><br>
+
+        <input
+            type="radio"
+            id="binding"
+            name="category"
+            value="binding">
+        <label for="binding">Binding Services</label><br>
+    </fieldset>
+
+    <p>What's good about this place?</p>
+
+    <input
+        type="checkbox"
+        id="affordable"
+        name="features"
+        value="affordable">
+    <label for="affordable">Affordable</label><br>
+
+    <input
+        type="checkbox"
+        id="fastservice"
+        name="features"
+        value="fastservice">
+    <label for="fastservice">Fast Service</label><br>
+
+    <input
+        type="checkbox"
+        id="quality"
+        name="features"
+        value="quality">
+    <label for="quality">High-Quality Printing</label><br>
+
+    <p>
+        <label for="email">Contact Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+    </p>
+
+    <button type="submit">Submit Suggestion</button>
+</form>
+</main>
+
+<footer>
+    <p>© 2026 Print Shops Near TUP</p>
+</footer>
 
 </body>
 </html>
