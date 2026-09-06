@@ -1,0 +1,286 @@
+/* ====================================
+   1. VARIABLES
+==================================== */
+
+:root {
+    --brand-color: #4B4D63;
+    --accent-color: #EEC089;
+    --light-bg: #F9F8F5;
+
+    --white: #FFFFFF;
+    --dark-ink: #333333;
+    --muted-gray: #666666;
+
+    --blue-gray: #8A9DA4;
+    --border-color: #D7D0B6;
+}
+
+/* ====================================
+   2. BASE STYLES
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: var(--dark-ink);
+    background-color: var(--light-bg);
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--brand-color);
+}
+
+p {
+    color: var(--dark-ink);
+}
+
+/* ====================================
+   3. LAYOUT REGIONS
+==================================== */
+
+header {
+    background-color: var(--brand-color);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    color: var(--white);
+}
+
+nav {
+    background-color: var(--white);
+    border-bottom: 4px solid var(--accent-color);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-ink);
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--brand-color);
+}
+
+main {
+    max-width: 900px;
+    margin:auto;
+    padding: 30px 20px;
+}
+
+footer {
+    background-color: var(--brand-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: var(--white);
+}
+
+/* ====================================
+   4. COMPONENTS
+==================================== */
+/* Intro */
+
+.intro {
+    text-align: center;
+    color: var(--muted-gray);
+    margin-bottom: 30px;
+}
+
+/* Place Cards */
+
+.place-card {
+    background-color: var(--white);
+    border-left: 6px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.place-card h3 {
+    color: var(--brand-color);
+    font-size: 1.4rem;
+}
+
+.place-card p {
+    color: var(--dark-ink);
+}
+
+.place-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: var(--brand-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.place-card a:hover {
+  background-color: var(--blue-gray);
+}
+
+/* Form */
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+legend {
+    color: var(--brand-color);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--muted-gray);
+    border-radius: 8px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+button {
+    background-color: var(--brand-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--blue-gray);
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--brand-color);
+    color: var(--white);
+}
+
+hr {
+    border: none;
+    border-top: 2px solid var(--accent-color);
+    margin: 30px 0;
+}
+
+/* ====================================
+   5. RESPONSIVE DESIGN
+==================================== */
+
+@media (max-width: 768px) {
+   
+    header {
+        padding: 20px 15px;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    main {
+        padding: 20px 15px;
+    }
+    img {
+        max-width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* ====================================
+   6. ACCESSIBILITY & FOCUS
+==================================== */
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--brand-color);
+    outline-offset: 2px;
+}
