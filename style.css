@@ -32,12 +32,8 @@ body {
 }
 
 img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border-radius: 10px;
+   max-width: 100%;
+   height: auto;
 }
 
 h1,
@@ -56,11 +52,12 @@ p {
 
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side main"
-        "foot foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
 }
 
@@ -95,8 +92,8 @@ footer {
 
 .site-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 15px;
 
     background-color: var(--brand-color);
     padding: 20px 30px;
@@ -117,7 +114,8 @@ footer {
 
 .site-header nav ul {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -125,11 +123,10 @@ footer {
 
 .site-header nav a {
     text-decoration: none;
-    color: var(--dark-ink);
+    color: var(--white);
     font-weight: bold;
     padding: 8px 14px;
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .site-header nav a:hover {
@@ -252,6 +249,7 @@ input[type="checkbox"] {
 }
 
 button {
+    width: 100%;
     background-color: var(--brand-color);
     color: var(--white);
     border: none;
@@ -296,40 +294,39 @@ hr {
    5. RESPONSIVE DESIGN
 ==================================== */
 
-@media (max-width: 700px) {
+@media (min-width:700px){
 
-   .page {
-        grid-template-columns: 1fr;
+    .page {
+        grid-template-columns:220px 1fr;
+
         grid-template-areas:
-            "masthead"
-            "main"
-            "side"
-            "foot";
+            "masthead masthead"
+            "side main"
+            "foot foot";
     }
+
 
     .site-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
     }
+
+
     .site-header nav ul {
-       flex-direction: column;
-       align-items: center;
+        flex-direction: row;
     }
+
+
     main {
-        padding: 20px 15px;
+        padding:30px 20px;
     }
-    img {
-        max-width: 100%;
-    }
+
+
     button {
-        width: 100%;
+        width:auto;
     }
-    table {
-        display: block;
-        overflow-x: auto;
-    }
+
 }
 
 /* ====================================
@@ -343,4 +340,4 @@ select:focus,
 textarea:focus {
     outline: 3px solid var(--brand-color);
     outline-offset: 2px;
-}
+} 
